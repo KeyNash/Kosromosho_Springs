@@ -1,1788 +1,309 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en-KE">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Koromosho Springs | Pure Water from Eldoret</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary: #0066cc;
-            --primary-dark: #004d99;
-            --primary-light: #e6f2ff;
-            --accent: #00bfff;
-            --white: #ffffff;
-            --gray: #f8f9fa;
-            --dark: #1a1a2e;
-            --text: #333333;
-            --text-light: #666666;
-            --shadow: 0 10px 40px rgba(0, 102, 204, 0.15);
-            --shadow-lg: 0 20px 60px rgba(0, 102, 204, 0.2);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            color: var(--text);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        /* Scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: var(--gray);
-        }
-        ::-webkit-scrollbar-thumb {
-            background: var(--primary);
-            border-radius: 4px;
-        }
-
-        /* Navigation */
-        .navbar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            padding: 1rem 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: all 0.3s ease;
-        }
-
-        .navbar.scrolled {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(20px);
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
-            padding: 0.8rem 5%;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-            text-decoration: none;
-        }
-
-        .logo-icon {
-            width: 45px;
-            height: 45px;
-            background: var(--primary);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: 700;
-            font-size: 1.2rem;
-        }
-
-        .logo-text {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--white);
-            transition: color 0.3s;
-        }
-
-        .navbar.scrolled .logo-text {
-            color: var(--primary);
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2.5rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--white);
-            font-weight: 500;
-            font-size: 0.95rem;
-            transition: all 0.3s;
-            position: relative;
-        }
-
-        .navbar.scrolled .nav-links a {
-            color: var(--text);
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--accent);
-            transition: width 0.3s;
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
-        .nav-links a:hover {
-            color: var(--accent);
-        }
-
-        .nav-cta {
-            background: var(--white);
-            color: var(--primary);
-            padding: 0.7rem 1.8rem;
-            border-radius: 50px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .navbar.scrolled .nav-cta {
-            background: var(--primary);
-            color: var(--white);
-        }
-
-        .nav-cta:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-        }
-
-        .menu-toggle {
-            display: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-            color: var(--white);
-        }
-
-        .navbar.scrolled .menu-toggle {
-            color: var(--primary);
-        }
-
-        /* Hero Section */
-        .hero {
-            min-height: 100vh;
-            background: var(--primary);
-            background: radial-gradient(ellipse at top right, var(--accent) 0%, transparent 50%),
-                        radial-gradient(ellipse at bottom left, var(--primary-dark) 0%, var(--primary) 100%);
-            display: flex;
-            align-items: center;
-            padding: 0 5%;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-            opacity: 0.5;
-        }
-
-        .hero-content {
-            max-width: 600px;
-            position: relative;
-            z-index: 1;
-            animation: slideInLeft 1s ease;
-        }
-
-        .hero-badge {
-            display: inline-block;
-            background: rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(10px);
-            color: var(--white);
-            padding: 0.5rem 1.2rem;
-            border-radius: 50px;
-            font-size: 0.85rem;
-            font-weight: 500;
-            margin-bottom: 1.5rem;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 800;
-            color: var(--white);
-            line-height: 1.2;
-            margin-bottom: 1.5rem;
-        }
-
-        .hero h1 span {
-            color: var(--accent);
-        }
-
-        .hero p {
-            font-size: 1.1rem;
-            color: rgba(255, 255, 255, 0.9);
-            margin-bottom: 2.5rem;
-            line-height: 1.8;
-        }
-
-        .hero-btns {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .btn-primary {
-            background: var(--white);
-            color: var(--primary);
-            padding: 1rem 2.5rem;
-            border-radius: 50px;
-            font-weight: 600;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            transition: all 0.3s;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: var(--white);
-            padding: 1rem 2.5rem;
-            border-radius: 50px;
-            font-weight: 600;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            border: 2px solid rgba(255, 255, 255, 0.4);
-            transition: all 0.3s;
-        }
-
-        .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.1);
-            border-color: var(--white);
-        }
-
-        .hero-image {
-            position: absolute;
-            right: 5%;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 40%;
-            max-width: 500px;
-            animation: float 6s ease-in-out infinite, slideInRight 1s ease;
-        }
-
-        .hero-image img {
-            width: 100%;
-            filter: drop-shadow(0 30px 60px rgba(0, 0, 0, 0.3));
-            border-radius: 20px;
-        }
-
-        .wave-bottom {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            line-height: 0;
-        }
-
-        .wave-bottom svg {
-            display: block;
-            width: 100%;
-            height: 120px;
-        }
-
-        /* Stats Bar */
-        .stats-bar {
-            background: var(--white);
-            padding: 3rem 5%;
-            display: flex;
-            justify-content: center;
-            gap: 5rem;
-            flex-wrap: wrap;
-            box-shadow: var(--shadow);
-            position: relative;
-            z-index: 2;
-            margin-top: -2px;
-        }
-
-        .stat-item {
-            text-align: center;
-        }
-
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: var(--primary);
-            display: block;
-        }
-
-        .stat-label {
-            font-size: 0.9rem;
-            color: var(--text-light);
-            font-weight: 500;
-        }
-
-        /* Section Styles */
-        .section {
-            padding: 6rem 5%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .section-tag {
-            display: inline-block;
-            background: var(--primary-light);
-            color: var(--primary);
-            padding: 0.4rem 1.2rem;
-            border-radius: 50px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--dark);
-            margin-bottom: 1rem;
-        }
-
-        .section-subtitle {
-            font-size: 1.1rem;
-            color: var(--text-light);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        /* About Section */
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .about-image {
-            position: relative;
-        }
-
-        .about-image img {
-            width: 100%;
-            border-radius: 20px;
-            box-shadow: var(--shadow-lg);
-        }
-
-        .about-image::before {
-            content: '';
-            position: absolute;
-            top: -20px;
-            left: -20px;
-            width: 100px;
-            height: 100px;
-            background: var(--primary-light);
-            border-radius: 20px;
-            z-index: -1;
-        }
-
-        .about-image::after {
-            content: '';
-            position: absolute;
-            bottom: -20px;
-            right: -20px;
-            width: 150px;
-            height: 150px;
-            background: var(--primary);
-            border-radius: 20px;
-            opacity: 0.1;
-            z-index: -1;
-        }
-
-        .about-content h3 {
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--dark);
-            margin-bottom: 1.5rem;
-        }
-
-        .about-content p {
-            color: var(--text-light);
-            margin-bottom: 1.5rem;
-            line-height: 1.8;
-        }
-
-        .about-features {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-
-        .about-feature {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .about-feature-icon {
-            width: 50px;
-            height: 50px;
-            background: var(--primary-light);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--primary);
-            font-size: 1.2rem;
-            flex-shrink: 0;
-        }
-
-        .about-feature-text h4 {
-            font-weight: 600;
-            color: var(--dark);
-        }
-
-        .about-feature-text p {
-            font-size: 0.9rem;
-            color: var(--text-light);
-            margin: 0;
-        }
-
-        /* Products Section */
-        .products-section {
-            background: var(--gray);
-        }
-
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-        }
-
-        .product-card {
-            background: var(--white);
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: all 0.4s ease;
-            position: relative;
-        }
-
-        .product-card:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .product-badge {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            background: var(--primary);
-            color: var(--white);
-            padding: 0.3rem 1rem;
-            border-radius: 50px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            z-index: 2;
-        }
-
-        .product-image {
-            height: 250px;
-            background: var(--primary-light);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .product-image::before {
-            content: '';
-            position: absolute;
-            width: 200px;
-            height: 200px;
-            background: radial-gradient(circle, var(--accent) 0%, transparent 70%);
-            opacity: 0.3;
-            border-radius: 50%;
-        }
-
-        .product-image span {
-            font-size: 5rem;
-            z-index: 1;
-        }
-
-        .product-info {
-            padding: 1.5rem 2rem 2rem;
-        }
-
-        .product-name {
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: var(--dark);
-            margin-bottom: 0.5rem;
-        }
-
-        .product-desc {
-            font-size: 0.9rem;
-            color: var(--text-light);
-            margin-bottom: 1rem;
-        }
-
-        .product-price {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary);
-            margin-bottom: 1rem;
-        }
-
-        .product-price span {
-            font-size: 0.9rem;
-            color: var(--text-light);
-            font-weight: 400;
-            text-decoration: line-through;
-            margin-left: 0.5rem;
-        }
-
-        .product-btn {
-            width: 100%;
-            background: var(--primary);
-            color: var(--white);
-            padding: 0.9rem;
-            border: none;
-            border-radius: 12px;
-            font-weight: 600;
-            font-family: 'Poppins', sans-serif;
-            cursor: pointer;
-            transition: all 0.3s;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-        }
-
-        .product-btn:hover {
-            background: var(--primary-dark);
-            transform: scale(1.02);
-        }
-
-        /* Why Choose Us */
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-
-        .feature-card {
-            background: var(--white);
-            padding: 2.5rem 2rem;
-            border-radius: 20px;
-            text-align: center;
-            box-shadow: var(--shadow);
-            transition: all 0.4s ease;
-            border: 1px solid transparent;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--primary-light);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .feature-icon {
-            width: 70px;
-            height: 70px;
-            background: var(--primary-light);
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1.5rem;
-            font-size: 2rem;
-            transition: all 0.3s;
-        }
-
-        .feature-card:hover .feature-icon {
-            background: var(--primary);
-            transform: rotate(5deg) scale(1.1);
-        }
-
-        .feature-card:hover .feature-icon span {
-            filter: brightness(0) invert(1);
-        }
-
-        .feature-title {
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: var(--dark);
-            margin-bottom: 0.8rem;
-        }
-
-        .feature-desc {
-            font-size: 0.95rem;
-            color: var(--text-light);
-            line-height: 1.7;
-        }
-
-        /* Delivery Section */
-        .delivery-section {
-            background: var(--primary);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .delivery-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-        }
-
-        .delivery-section .section-title,
-        .delivery-section .section-subtitle {
-            color: var(--white);
-        }
-
-        .delivery-section .section-tag {
-            background: rgba(255, 255, 255, 0.2);
-            color: var(--white);
-        }
-
-        .delivery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        .delivery-card {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 20px;
-            padding: 2.5rem 2rem;
-            color: var(--white);
-            transition: all 0.3s;
-        }
-
-        .delivery-card:hover {
-            background: rgba(255, 255, 255, 0.2);
-            transform: translateY(-5px);
-        }
-
-        .delivery-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-        }
-
-        .delivery-card p {
-            font-size: 0.95rem;
-            opacity: 0.9;
-            line-height: 1.7;
-            margin-bottom: 1.5rem;
-        }
-
-        .delivery-card .price {
-            font-size: 2rem;
-            font-weight: 800;
-        }
-
-        .delivery-card .price span {
-            font-size: 0.9rem;
-            font-weight: 400;
-            opacity: 0.8;
-        }
-
-        .mpesa-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            background: #00a650;
-            color: var(--white);
-            padding: 0.8rem 1.5rem;
-            border-radius: 12px;
-            font-weight: 600;
-            text-decoration: none;
-            margin-top: 1rem;
-            transition: all 0.3s;
-            border: none;
-            cursor: pointer;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        .mpesa-btn:hover {
-            background: #008f44;
-            transform: scale(1.05);
-        }
-
-        /* Testimonials */
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .testimonial-card {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 20px;
-            box-shadow: var(--shadow);
-            position: relative;
-        }
-
-        .testimonial-card::before {
-            content: '"';
-            position: absolute;
-            top: 1rem;
-            right: 1.5rem;
-            font-size: 4rem;
-            color: var(--primary-light);
-            font-family: Georgia, serif;
-            line-height: 1;
-        }
-
-        .testimonial-stars {
-            color: #ffc107;
-            margin-bottom: 1rem;
-            font-size: 1.2rem;
-        }
-
-        .testimonial-text {
-            font-size: 1rem;
-            color: var(--text);
-            line-height: 1.8;
-            margin-bottom: 1.5rem;
-            font-style: italic;
-        }
-
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .testimonial-avatar {
-            width: 50px;
-            height: 50px;
-            background: var(--primary-light);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            color: var(--primary);
-            font-size: 1.2rem;
-        }
-
-        .testimonial-name {
-            font-weight: 600;
-            color: var(--dark);
-        }
-
-        .testimonial-role {
-            font-size: 0.85rem;
-            color: var(--text-light);
-        }
-
-        /* Contact Section */
-        .contact-section {
-            background: var(--gray);
-        }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-        }
-
-        .contact-info h3 {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--dark);
-            margin-bottom: 1.5rem;
-        }
-
-        .contact-info p {
-            color: var(--text-light);
-            margin-bottom: 2rem;
-            line-height: 1.8;
-        }
-
-        .contact-details {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .contact-item-icon {
-            width: 50px;
-            height: 50px;
-            background: var(--primary);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--white);
-            font-size: 1.2rem;
-            flex-shrink: 0;
-        }
-
-        .contact-item-text h4 {
-            font-weight: 600;
-            color: var(--dark);
-            font-size: 1rem;
-        }
-
-        .contact-item-text p {
-            margin: 0;
-            font-size: 0.95rem;
-        }
-
-        .contact-form {
-            background: var(--white);
-            padding: 2.5rem;
-            border-radius: 20px;
-            box-shadow: var(--shadow);
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group label {
-            display: block;
-            font-weight: 600;
-            color: var(--dark);
-            margin-bottom: 0.5rem;
-            font-size: 0.95rem;
-        }
-
-        .form-group input,
-        .form-group textarea,
-        .form-group select {
-            width: 100%;
-            padding: 1rem;
-            border: 2px solid #e0e0e0;
-            border-radius: 12px;
-            font-family: 'Poppins', sans-serif;
-            font-size: 1rem;
-            transition: all 0.3s;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus,
-        .form-group select:focus {
-            outline: none;
-            border-color: var(--primary);
-            box-shadow: 0 0 0 4px var(--primary-light);
-        }
-
-        .form-group textarea {
-            resize: vertical;
-            min-height: 120px;
-        }
-
-        .submit-btn {
-            width: 100%;
-            background: var(--primary);
-            color: var(--white);
-            padding: 1rem;
-            border: none;
-            border-radius: 12px;
-            font-weight: 600;
-            font-family: 'Poppins', sans-serif;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-
-        .submit-btn:hover {
-            background: var(--primary-dark);
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(0, 102, 204, 0.3);
-        }
-
-        /* Footer */
-        .footer {
-            background: var(--dark);
-            color: var(--white);
-            padding: 4rem 5% 2rem;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 3rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .footer-brand h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-        }
-
-        .footer-brand p {
-            font-size: 0.95rem;
-            opacity: 0.8;
-            line-height: 1.8;
-            margin-bottom: 1.5rem;
-        }
-
-        .footer-social {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .footer-social a {
-            width: 40px;
-            height: 40px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--white);
-            text-decoration: none;
-            transition: all 0.3s;
-            font-size: 1.1rem;
-        }
-
-        .footer-social a:hover {
-            background: var(--primary);
-            transform: translateY(-3px);
-        }
-
-        .footer-links h4 {
-            font-size: 1.1rem;
-            margin-bottom: 1.5rem;
-            font-weight: 600;
-        }
-
-        .footer-links ul {
-            list-style: none;
-        }
-
-        .footer-links li {
-            margin-bottom: 0.8rem;
-        }
-
-        .footer-links a {
-            color: rgba(255, 255, 255, 0.7);
-            text-decoration: none;
-            transition: all 0.3s;
-            font-size: 0.95rem;
-        }
-
-        .footer-links a:hover {
-            color: var(--accent);
-            padding-left: 5px;
-        }
-
-        .footer-bottom {
-            max-width: 1200px;
-            margin: 3rem auto 0;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            text-align: center;
-            font-size: 0.9rem;
-            opacity: 0.7;
-        }
-
-        /* WhatsApp Floating Button */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            width: 60px;
-            height: 60px;
-            background: #25d366;
-            color: var(--white);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.8rem;
-            text-decoration: none;
-            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
-            z-index: 999;
-            transition: all 0.3s;
-            animation: pulse 2s infinite;
-        }
-
-        .whatsapp-float:hover {
-            transform: scale(1.1) rotate(10deg);
-            box-shadow: 0 15px 40px rgba(37, 211, 102, 0.5);
-        }
-
-        /* Animations */
-        @keyframes slideInLeft {
-            from {
-                opacity: 0;
-                transform: translateX(-50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        @keyframes slideInRight {
-            from {
-                opacity: 0;
-                transform: translateX(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(-50%) translateX(0);
-            }
-            50% {
-                transform: translateY(-50%) translateY(-20px);
-            }
-        }
-
-        @keyframes pulse {
-            0% {
-                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
-            }
-            70% {
-                box-shadow: 0 0 0 20px rgba(37, 211, 102, 0);
-            }
-            100% {
-                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-            }
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.6s ease;
-        }
-
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Responsive */
-        @media (max-width: 1024px) {
-            .hero-image {
-                display: none;
-            }
-
-            .hero-content {
-                max-width: 100%;
-                text-align: center;
-            }
-
-            .hero-btns {
-                justify-content: center;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-
-            .menu-toggle {
-                display: block;
-            }
-
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .about-grid,
-            .contact-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .footer-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .stats-bar {
-                gap: 2rem;
-            }
-
-            .section {
-                padding: 4rem 5%;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .hero p {
-                font-size: 1rem;
-            }
-
-            .hero-btns {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .btn-primary,
-            .btn-secondary {
-                width: 100%;
-                justify-content: center;
-            }
-
-            .footer-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .product-image span {
-                font-size: 3rem;
-            }
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#12372a">
+  <meta name="description" content="Koromosho Springs is a personal portfolio concept for a modern Eldoret water-delivery brand.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta property="og:title" content="Koromosho Springs — Eldoret water delivery concept">
+  <meta property="og:description" content="A Kenyan-first product and ordering experience designed as a personal portfolio project.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_KE">
+  <meta property="og:image" content="assets/koromosho-highlands-hero.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Koromosho Springs — Water delivery, the Eldoret way</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/koromosho-highlands-hero.webp" as="image" type="image/webp" fetchpriority="high">
+  <style>
+    :root {
+      --forest: #12372a;
+      --forest-2: #1f5541;
+      --mist: #eaf4ef;
+      --cream: #f5f0e6;
+      --paper: #fffdf8;
+      --ink: #17211d;
+      --muted: #5c6a64;
+      --clay: #b95738;
+      --clay-dark: #8e3c26;
+      --line: rgba(23, 33, 29, .14);
+      --shadow: 0 24px 70px rgba(18, 55, 42, .14);
+      --radius: 1.4rem;
+      --serif: Georgia, 'Times New Roman', serif;
+      --sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; color: var(--ink); background: var(--paper); font-family: var(--sans); line-height: 1.6; }
+    body.nav-open { overflow: hidden; }
+    img { display: block; max-width: 100%; }
+    button, input, select { font: inherit; }
+    a { color: inherit; }
+    :focus-visible { outline: 3px solid #f2a082; outline-offset: 4px; }
+    .skip-link { position: fixed; z-index: 9999; left: 1rem; top: 1rem; transform: translateY(-180%); padding: .75rem 1rem; background: var(--paper); color: var(--forest); border-radius: .5rem; }
+    .skip-link:focus { transform: none; }
+    .container { width: min(1180px, calc(100% - 2rem)); margin-inline: auto; }
+    .eyebrow { margin: 0 0 .8rem; color: var(--clay-dark); font-size: .75rem; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+    .display { margin: 0; font: 500 clamp(2.5rem, 7vw, 6rem)/.96 var(--serif); letter-spacing: -.045em; }
+    .section-title { max-width: 760px; margin: 0; font: 500 clamp(2.1rem, 4.5vw, 4.5rem)/1.02 var(--serif); letter-spacing: -.035em; }
+    .lede { max-width: 650px; color: var(--muted); font-size: clamp(1rem, 1.8vw, 1.2rem); }
+    .button { display: inline-flex; min-height: 48px; align-items: center; justify-content: center; gap: .55rem; padding: .8rem 1.1rem; border: 1px solid transparent; border-radius: 999px; font-weight: 750; text-decoration: none; cursor: pointer; transition: transform .2s ease, background .2s ease, color .2s ease; }
+    .button:hover { transform: translateY(-2px); }
+    .button-primary { background: var(--clay); color: #fff; }
+    .button-primary:hover { background: var(--clay-dark); }
+    .button-secondary { border-color: currentColor; color: var(--forest); background: transparent; }
+
+    .concept-bar { padding: .55rem 1rem; color: #fff; background: var(--forest); text-align: center; font-size: .78rem; letter-spacing: .02em; }
+    .site-header { position: sticky; z-index: 100; top: 0; border-bottom: 1px solid rgba(23, 33, 29, .08); background: rgba(255, 253, 248, .9); backdrop-filter: blur(16px); }
+    .nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+    .brand { display: inline-flex; align-items: center; gap: .7rem; font-weight: 850; text-decoration: none; letter-spacing: -.03em; }
+    .brand-mark { width: 2.35rem; height: 2.35rem; display: grid; place-items: center; border-radius: 50%; color: #fff; background: var(--forest); font: 700 .85rem var(--serif); }
+    .nav-links { display: flex; align-items: center; gap: 1.6rem; }
+    .nav-links a { font-size: .9rem; font-weight: 700; text-decoration: none; }
+    .nav-links a:not(.button):hover { color: var(--clay-dark); }
+    .nav-toggle { display: none; width: 46px; height: 46px; border: 1px solid var(--line); border-radius: 50%; background: transparent; cursor: pointer; }
+
+    .hero { position: relative; min-height: min(810px, calc(100svh - 112px)); display: grid; align-items: end; isolation: isolate; overflow: hidden; color: #fff; background: var(--forest); }
+    .hero-media { position: absolute; z-index: -2; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 58% center; }
+    .hero::after { content: ''; position: absolute; z-index: -1; inset: 0; background: linear-gradient(90deg, rgba(11, 31, 24, .94) 0%, rgba(11, 31, 24, .7) 44%, rgba(11, 31, 24, .12) 76%), linear-gradient(0deg, rgba(11, 31, 24, .72), transparent 50%); }
+    .hero-inner { padding-block: clamp(5rem, 10vw, 8rem); }
+    .hero-copy { max-width: 710px; }
+    .hero .eyebrow { color: #f5b7a2; }
+    .hero p { max-width: 620px; margin: 1.5rem 0 2rem; color: rgba(255,255,255,.83); font-size: clamp(1rem, 2vw, 1.22rem); }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: .8rem; }
+    .hero .button-secondary { color: #fff; }
+    .hero-note { margin-top: 3rem; display: flex; flex-wrap: wrap; gap: 1rem 2rem; color: rgba(255,255,255,.72); font-size: .8rem; }
+    .hero-note strong { display: block; color: #fff; font-size: .95rem; }
+
+    .intro { padding-block: clamp(5rem, 10vw, 9rem); }
+    .intro-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: clamp(2rem, 7vw, 7rem); align-items: start; }
+    .intro-copy { color: var(--muted); font-size: 1.08rem; }
+    .intro-copy p:first-child { margin-top: 0; color: var(--ink); font: 500 clamp(1.45rem, 3vw, 2.3rem)/1.25 var(--serif); }
+    .principles { margin: 2.5rem 0 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
+    .principles li { display: grid; grid-template-columns: 2.3rem 1fr; gap: .8rem; padding: 1.1rem 0; border-bottom: 1px solid var(--line); }
+    .principles span { color: var(--clay-dark); font-weight: 800; }
+
+    .range { padding-block: clamp(4.5rem, 9vw, 8rem); background: var(--mist); }
+    .section-head { display: flex; align-items: end; justify-content: space-between; gap: 2rem; margin-bottom: 2.5rem; }
+    .section-head .lede { margin: 0; max-width: 430px; }
+    .product-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .product { position: relative; min-height: 390px; display: flex; flex-direction: column; justify-content: space-between; padding: 1.5rem; overflow: hidden; border: 1px solid rgba(18,55,42,.12); border-radius: var(--radius); background: rgba(255,255,255,.7); }
+    .product::after { content: ''; position: absolute; width: 12rem; height: 12rem; right: -5rem; bottom: -5rem; border-radius: 50%; background: var(--wash, #cae4d8); opacity: .7; }
+    .product-tag { font-size: .72rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+    .bottle { position: relative; z-index: 1; width: 86px; height: 180px; margin: 2rem auto; border: 2px solid rgba(18,55,42,.5); border-radius: 20px 20px 28px 28px; background: linear-gradient(90deg, rgba(255,255,255,.4), rgba(154,207,207,.5), rgba(255,255,255,.4)); box-shadow: inset 0 -55px rgba(66,152,166,.2), 0 18px 35px rgba(18,55,42,.12); }
+    .bottle::before { content: ''; position: absolute; width: 42px; height: 22px; top: -23px; left: 20px; border: 2px solid var(--forest); border-radius: 6px 6px 2px 2px; background: var(--forest); }
+    .bottle.large { width: 108px; height: 205px; border-radius: 23px 23px 34px 34px; }
+    .bottle.large::before { left: 31px; }
+    .bottle.crate { width: 150px; height: 110px; border-radius: 14px; background: repeating-linear-gradient(90deg, transparent 0 18px, rgba(18,55,42,.08) 18px 21px), linear-gradient(rgba(185,87,56,.25), rgba(185,87,56,.08)); }
+    .bottle.crate::before { width: 70px; left: 38px; top: -18px; background: transparent; border-radius: 12px 12px 0 0; }
+    .product h3 { margin: 0; font: 600 1.7rem var(--serif); }
+    .product-bottom { position: relative; z-index: 2; display: flex; justify-content: space-between; gap: 1rem; align-items: end; }
+    .product-bottom p { margin: .4rem 0 0; color: var(--muted); font-size: .86rem; }
+    .price { flex: none; color: var(--forest); font-weight: 850; }
+    .sample-note { margin: 1.25rem 0 0; color: var(--muted); font-size: .78rem; }
+
+    .delivery { padding-block: clamp(5rem, 10vw, 9rem); }
+    .delivery-grid { display: grid; grid-template-columns: .95fr 1.05fr; gap: clamp(2rem, 7vw, 7rem); align-items: start; }
+    .map-card { position: sticky; top: 110px; padding: 2rem; border-radius: var(--radius); color: #fff; background: var(--forest); box-shadow: var(--shadow); }
+    .map-visual { position: relative; min-height: 330px; margin-bottom: 1.5rem; overflow: hidden; border-radius: 1rem; background: radial-gradient(circle at 47% 45%, #f5b7a2 0 5px, transparent 6px), radial-gradient(circle at 29% 30%, rgba(255,255,255,.7) 0 3px, transparent 4px), radial-gradient(circle at 68% 26%, rgba(255,255,255,.7) 0 3px, transparent 4px), radial-gradient(circle at 72% 70%, rgba(255,255,255,.7) 0 3px, transparent 4px), repeating-radial-gradient(ellipse at 50% 50%, transparent 0 28px, rgba(255,255,255,.08) 29px 30px), linear-gradient(145deg, #234f3f, #0d2d22); }
+    .map-visual::before, .map-visual::after { content: ''; position: absolute; background: rgba(255,255,255,.12); transform: rotate(-12deg); }
+    .map-visual::before { width: 120%; height: 2px; top: 48%; left: -10%; }
+    .map-visual::after { width: 2px; height: 120%; top: -10%; left: 53%; }
+    .map-label { position: absolute; padding: .35rem .55rem; border-radius: .4rem; background: rgba(255,255,255,.1); font-size: .72rem; }
+    .map-label:nth-child(1) { left: 36%; top: 42%; color: #ffd4c6; }
+    .map-label:nth-child(2) { left: 14%; top: 22%; }
+    .map-label:nth-child(3) { right: 9%; top: 19%; }
+    .map-label:nth-child(4) { right: 8%; bottom: 18%; }
+    .map-label:nth-child(5) { left: 12%; bottom: 20%; }
+    .zones { display: grid; gap: 1rem; }
+    .zone { padding: 1.3rem 0; border-bottom: 1px solid var(--line); }
+    .zone:first-child { border-top: 1px solid var(--line); }
+    .zone-top { display: flex; justify-content: space-between; gap: 1rem; }
+    .zone h3 { margin: 0; font: 600 1.35rem var(--serif); }
+    .zone p { margin: .4rem 0 0; color: var(--muted); }
+    .zone strong { color: var(--clay-dark); white-space: nowrap; }
+
+    .planner { padding-block: clamp(4.5rem, 9vw, 8rem); background: var(--cream); }
+    .planner-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: clamp(2rem, 7vw, 6rem); align-items: start; }
+    .planner-panel { padding: clamp(1.3rem, 4vw, 2.5rem); border-radius: var(--radius); background: var(--paper); box-shadow: var(--shadow); }
+    .demo-label { display: inline-flex; margin-bottom: 1.4rem; padding: .35rem .65rem; border-radius: 999px; color: var(--clay-dark); background: #fbe1d8; font-size: .72rem; font-weight: 850; letter-spacing: .08em; text-transform: uppercase; }
+    .field-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .field { display: grid; gap: .4rem; }
+    .field.full { grid-column: 1 / -1; }
+    label { font-size: .82rem; font-weight: 800; }
+    input, select { width: 100%; min-height: 50px; padding: .7rem .85rem; border: 1px solid var(--line); border-radius: .7rem; color: var(--ink); background: #fff; }
+    .estimate { margin: 1.3rem 0; padding: 1.1rem; border: 1px solid rgba(18,55,42,.14); border-radius: .8rem; background: var(--mist); }
+    .estimate-row { display: flex; justify-content: space-between; gap: 1rem; }
+    .estimate-row + .estimate-row { margin-top: .5rem; }
+    .estimate-total { padding-top: .7rem; margin-top: .7rem !important; border-top: 1px solid rgba(18,55,42,.18); font-size: 1.15rem; font-weight: 850; }
+    .form-note, #copyStatus { color: var(--muted); font-size: .78rem; }
+
+    .case-study { padding-block: clamp(5rem, 10vw, 9rem); color: #fff; background: var(--forest); }
+    .case-study .eyebrow { color: #f5b7a2; }
+    .case-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: clamp(2rem, 8vw, 8rem); align-items: end; }
+    .case-copy p { max-width: 680px; color: rgba(255,255,255,.72); }
+    .case-meta { margin: 0; padding: 0; list-style: none; border-top: 1px solid rgba(255,255,255,.2); }
+    .case-meta li { display: flex; justify-content: space-between; gap: 1rem; padding: .85rem 0; border-bottom: 1px solid rgba(255,255,255,.2); }
+    .case-meta span { color: rgba(255,255,255,.62); }
+
+    footer { padding: 2rem 0; border-top: 1px solid rgba(255,255,255,.12); color: rgba(255,255,255,.7); background: var(--forest); }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+    footer a { color: #fff; }
+
+    @media (max-width: 850px) {
+      .nav-toggle { display: grid; place-items: center; }
+      .nav-links { position: fixed; inset: 109px 0 auto; display: none; padding: 1.4rem 1rem 2rem; flex-direction: column; align-items: stretch; background: var(--paper); border-bottom: 1px solid var(--line); box-shadow: 0 20px 40px rgba(18,55,42,.12); }
+      .nav-links.open { display: flex; }
+      .nav-links a { padding: .65rem; }
+      .nav-links .button { text-align: center; }
+      .intro-grid, .delivery-grid, .planner-grid, .case-grid { grid-template-columns: 1fr; }
+      .product-grid { grid-template-columns: 1fr 1fr; }
+      .map-card { position: relative; top: auto; }
+      .section-head { display: block; }
+      .section-head .lede { margin-top: 1rem; }
+    }
+
+    @media (max-width: 560px) {
+      .container { width: min(100% - 1.25rem, 1180px); }
+      .concept-bar { font-size: .7rem; }
+      .nav { min-height: 68px; }
+      .brand span:last-child { font-size: .92rem; }
+      .nav-links { inset-block-start: 101px; }
+      .hero { min-height: 690px; }
+      .hero::after { background: linear-gradient(90deg, rgba(11,31,24,.9), rgba(11,31,24,.45)), linear-gradient(0deg, rgba(11,31,24,.84), transparent 70%); }
+      .hero-media { object-position: 62% center; }
+      .hero-actions .button { width: 100%; }
+      .product-grid, .field-grid { grid-template-columns: 1fr; }
+      .field.full { grid-column: auto; }
+      .product { min-height: 350px; }
+      .footer-inner { align-items: flex-start; flex-direction: column; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+    }
+  </style>
+  <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"CreativeWork","name":"Koromosho Springs","description":"A personal portfolio concept for a Kenyan water delivery experience.","inLanguage":"en-KE","locationCreated":{"@type":"Place","name":"Eldoret, Kenya"}}
+  </script>
 </head>
 <body>
-
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <a href="#" class="logo">
-            <div class="logo-icon">KS</div>
-            <span class="logo-text">Koromosho Springs</span>
-        </a>
-        <ul class="nav-links" id="navLinks">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#products">Products</a></li>
-            <li><a href="#delivery">Delivery</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-        <a href="#products" class="nav-cta">Order Now</a>
-        <div class="menu-toggle" id="menuToggle">☰</div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <div class="hero-badge">💧 Purified Drinking Water from Eldoret</div>
-            <h1>Pure Water. <span>Pure Life.</span></h1>
-            <p>Koromosho Springs delivers premium purified drinking water to homes, offices, and events across Eldoret and beyond. Clean, refreshing, and always on time.</p>
-            <div class="hero-btns">
-                <a href="#products" class="btn-primary">
-                    🛒 Order Water
-                </a>
-                <a href="https://wa.me/254700000000" class="btn-secondary" target="_blank">
-                    💬 WhatsApp Us
-                </a>
-            </div>
-        </div>
-        <div class="hero-image">
-            <img src="https://images.unsplash.com/photo-1548839140-29a749e1cf4d?w=500&auto=format&fit=crop&q=80" alt="Water Bottle">
-        </div>
-        <div class="wave-bottom">
-            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0 120L60 110C120 100 240 80 360 70C480 60 600 60 720 65C840 70 960 80 1080 85C1200 90 1320 90 1380 90L1440 90V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" fill="white"/>
-            </svg>
-        </div>
-    </section>
-
-    <!-- Stats Bar -->
-    <div class="stats-bar">
-        <div class="stat-item">
-            <span class="stat-number" data-count="5000">0</span>
-            <span class="stat-label">Happy Customers</span>
-        </div>
-        <div class="stat-item">
-            <span class="stat-number" data-count="15000">0</span>
-            <span class="stat-label">Bottles Delivered</span>
-        </div>
-        <div class="stat-item">
-            <span class="stat-number" data-count="24">0</span>
-            <span class="stat-label">Hour Delivery</span>
-        </div>
-        <div class="stat-item">
-            <span class="stat-number" data-count="100">0</span>
-            <span class="stat-label">% Pure Water</span>
-        </div>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <div class="concept-bar">Personal portfolio concept · No real orders or payments are processed</div>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="Koromosho Springs home"><span class="brand-mark" aria-hidden="true">KS</span><span>Koromosho Springs</span></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="navLinks" aria-label="Open navigation"><span aria-hidden="true">☰</span></button>
+      <nav class="nav-links" id="navLinks" aria-label="Primary navigation">
+        <a href="#story">Story</a><a href="#range">Water range</a><a href="#delivery">Delivery</a><a href="#project">Project</a>
+        <a class="button button-primary" href="#planner">Plan an order</a>
+      </nav>
     </div>
+  </header>
 
-    <!-- About Section -->
-    <section class="section" id="about">
-        <div class="section-header fade-in">
-            <span class="section-tag">About Us</span>
-            <h2 class="section-title">Fresh from the Springs of Eldoret</h2>
-            <p class="section-subtitle">We believe everyone deserves access to clean, safe drinking water. That's why we go the extra mile to purify, package, and deliver the best water in the Rift Valley.</p>
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <img class="hero-media" src="assets/koromosho-highlands-hero.webp" alt="A chilled reusable water bottle overlooking green Kenyan highlands at sunrise" width="1536" height="1024" fetchpriority="high">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow">Made for Eldoret days</p>
+          <h1 class="display" id="hero-title">Fresh water,<br>close to home.</h1>
+          <p>A Kenyan-first delivery concept shaped for homes, biashara, offices and celebrations across Eldoret.</p>
+          <div class="hero-actions"><a class="button button-primary" href="#planner">Build a sample order</a><a class="button button-secondary" href="#story">Explore the concept</a></div>
+          <div class="hero-note" aria-label="Concept highlights"><span><strong>Refill-minded</strong>Designed around returnable containers</span><span><strong>M-Pesa familiar</strong>A checkout flow Kenyans already know</span><span><strong>Eldoret focused</strong>Clear zones and local landmarks</span></div>
         </div>
-        <div class="about-grid">
-            <div class="about-image fade-in">
-                <img src="https://images.unsplash.com/photo-1538300342682-cf57afb97285?w=600&auto=format&fit=crop&q=80" alt="Water Spring">
-            </div>
-            <div class="about-content fade-in">
-                <h3>Why Koromosho Springs?</h3>
-                <p>Located in the heart of Eldoret, we source our water from natural springs and put it through a rigorous 7-stage purification process. From filtration to UV treatment and ozonation, every drop is guaranteed safe and refreshing.</p>
-                <p>Whether you need a single bottle for your home or a bulk order for your office, we've got you covered with reliable delivery and friendly service.</p>
-                <div class="about-features">
-                    <div class="about-feature">
-                        <div class="about-feature-icon">🔬</div>
-                        <div class="about-feature-text">
-                            <h4>7-Stage Purification</h4>
-                            <p>Advanced filtration, UV & ozone treatment</p>
-                        </div>
-                    </div>
-                    <div class="about-feature">
-                        <div class="about-feature-icon">🚚</div>
-                        <div class="about-feature-text">
-                            <h4>Same-Day Delivery</h4>
-                            <p>Order before 2 PM, get it today in Eldoret</p>
-                        </div>
-                    </div>
-                    <div class="about-feature">
-                        <div class="about-feature-icon">♻️</div>
-                        <div class="about-feature-text">
-                            <h4>Eco-Friendly Packaging</h4>
-                            <p>Recyclable bottles, sustainable practices</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+      </div>
     </section>
 
-    <!-- Products Section -->
-    <section class="products-section" id="products">
-        <div class="section">
-            <div class="section-header fade-in">
-                <span class="section-tag">Our Products</span>
-                <h2 class="section-title">Choose Your Refreshment</h2>
-                <p class="section-subtitle">From personal bottles to bulk dispenser refills — we have the right size for every need.</p>
-            </div>
-            <div class="products-grid">
-                <div class="product-card fade-in">
-                    <div class="product-badge">Popular</div>
-                    <div class="product-image">
-                        <span>💧</span>
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-name">500ml Bottle</h3>
-                        <p class="product-desc">Perfect for on-the-go hydration. Grab one for your workout, commute, or lunch break.</p>
-                        <div class="product-price">KES 30 <span>KES 35</span></div>
-                        <button class="product-btn" onclick="orderNow('500ml Bottle', 30)">
-                            🛒 Order Now
-                        </button>
-                    </div>
-                </div>
-                <div class="product-card fade-in">
-                    <div class="product-image">
-                        <span>💧💧</span>
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-name">1 Litre Bottle</h3>
-                        <p class="product-desc">The daily essential. Ideal for your desk, car, or personal use at home.</p>
-                        <div class="product-price">KES 50 <span>KES 60</span></div>
-                        <button class="product-btn" onclick="orderNow('1 Litre Bottle', 50)">
-                            🛒 Order Now
-                        </button>
-                    </div>
-                </div>
-                <div class="product-card fade-in">
-                    <div class="product-badge">Best Value</div>
-                    <div class="product-image">
-                        <span>💧💧💧</span>
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-name">5 Litre Jerrycan</h3>
-                        <p class="product-desc">Great for small families, students, or office pantries. Easy to carry and store.</p>
-                        <div class="product-price">KES 200 <span>KES 250</span></div>
-                        <button class="product-btn" onclick="orderNow('5 Litre Jerrycan', 200)">
-                            🛒 Order Now
-                        </button>
-                    </div>
-                </div>
-                <div class="product-card fade-in">
-                    <div class="product-image">
-                        <span>🥤</span>
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-name">18.9 Litre Dispenser</h3>
-                        <p class="product-desc">The office and home favorite. Fits all standard water dispensers. Refill available.</p>
-                        <div class="product-price">KES 350 <span>KES 400</span></div>
-                        <button class="product-btn" onclick="orderNow('18.9 Litre Dispenser', 350)">
-                            🛒 Order Now
-                        </button>
-                    </div>
-                </div>
-                <div class="product-card fade-in">
-                    <div class="product-badge">Bulk</div>
-                    <div class="product-image">
-                        <span>📦</span>
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-name">Bulk Pack (24 x 500ml)</h3>
-                        <p class="product-desc">Stock up for events, shops, or offices. Wholesale pricing available.</p>
-                        <div class="product-price">KES 650 <span>KES 720</span></div>
-                        <button class="product-btn" onclick="orderNow('Bulk Pack (24 x 500ml)', 650)">
-                            🛒 Order Now
-                        </button>
-                    </div>
-                </div>
-                <div class="product-card fade-in">
-                    <div class="product-image">
-                        <span>🎉</span>
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-name">Event Package</h3>
-                        <p class="product-desc">Weddings, conferences, or parties. Custom branded bottles available on request.</p>
-                        <div class="product-price">Custom</div>
-                        <button class="product-btn" onclick="orderNow('Event Package', 0)">
-                            📞 Get Quote
-                        </button>
-                    </div>
-                </div>
-            </div>
+    <section class="intro" id="story">
+      <div class="container intro-grid">
+        <div><p class="eyebrow">The idea</p><h2 class="section-title">A water brand that feels rooted, not imported.</h2></div>
+        <div class="intro-copy">
+          <p>Koromosho Springs imagines a calmer way to keep water stocked—built around the pace, language and practical realities of Eldoret life.</p>
+          <p>The visual system takes cues from Rift Valley greens, wet stone, rich soil and woven texture. The product experience keeps things direct: choose a size, see the delivery zone, understand the sample total.</p>
+          <ol class="principles"><li><span>01</span><div><strong>Useful before flashy</strong><br>Prices, sizes and delivery information stay easy to scan.</div></li><li><span>02</span><div><strong>Local without cliché</strong><br>No safari shorthand—just a contemporary Kenyan point of view.</div></li><li><span>03</span><div><strong>Honest by design</strong><br>This portfolio demo labels sample data and never pretends to take a real payment.</div></li></ol>
         </div>
+      </div>
     </section>
 
-    <!-- Why Choose Us -->
-    <section class="section">
-        <div class="section-header fade-in">
-            <span class="section-tag">Why Us</span>
-            <h2 class="section-title">The Koromosho Difference</h2>
-            <p class="section-subtitle">We're not just selling water. We're delivering health, convenience, and trust to every doorstep in Eldoret.</p>
+    <section class="range" id="range" aria-labelledby="range-title">
+      <div class="container">
+        <div class="section-head"><div><p class="eyebrow">Sample water range</p><h2 class="section-title" id="range-title">A size for every kind of day.</h2></div><p class="lede">From the morning matatu to the weekly office refill, the range keeps familiar Kenyan routines in view.</p></div>
+        <div class="product-grid">
+          <article class="product"><span class="product-tag">On the move</span><div class="bottle" aria-hidden="true"></div><div class="product-bottom"><div><h3>Safiri 500 ml</h3><p>Cold, light and easy to carry.</p></div><div class="price">KSh 30</div></div></article>
+          <article class="product" style="--wash:#dcbfae"><span class="product-tag">Desk companion</span><div class="bottle large" aria-hidden="true"></div><div class="product-bottom"><div><h3>Kazi 1 litre</h3><p>For class, work or a long drive.</p></div><div class="price">KSh 60</div></div></article>
+          <article class="product" style="--wash:#bbd3ca"><span class="product-tag">Home & office</span><div class="bottle crate" aria-hidden="true"></div><div class="product-bottom"><div><h3>Nyumbani 20 L</h3><p>A returnable dispenser refill.</p></div><div class="price">KSh 300</div></div></article>
         </div>
-        <div class="features-grid">
-            <div class="feature-card fade-in">
-                <div class="feature-icon">🔬</div>
-                <h3 class="feature-title">Lab Tested</h3>
-                <p class="feature-desc">Every batch is tested in certified labs for purity, pH balance, and mineral content. Safety first.</p>
-            </div>
-            <div class="feature-card fade-in">
-                <div class="feature-icon">🚚</div>
-                <h3 class="feature-title">Fast Delivery</h3>
-                <p class="feature-desc">Same-day delivery in Eldoret town. Scheduled deliveries for offices and recurring orders.</p>
-            </div>
-            <div class="feature-card fade-in">
-                <div class="feature-icon">💳</div>
-                <h3 class="feature-title">M-Pesa Pay</h3>
-                <p class="feature-desc">Pay easily with M-Pesa, cash on delivery, or bank transfer. No hassle, just hydration.</p>
-            </div>
-            <div class="feature-card fade-in">
-                <div class="feature-icon">🌿</div>
-                <h3 class="feature-title">Eco Conscious</h3>
-                <p class="feature-desc">Return empty bottles for recycling credits. We reward you for keeping Eldoret green.</p>
-            </div>
-        </div>
+        <p class="sample-note">Illustrative concept prices only. They are not a public offer or verified operating-business rates.</p>
+      </div>
     </section>
 
-    <!-- Delivery Section -->
-    <section class="delivery-section" id="delivery">
-        <div class="section">
-            <div class="section-header fade-in">
-                <span class="section-tag">Delivery Plans</span>
-                <h2 class="section-title">Water Delivered Your Way</h2>
-                <p class="section-subtitle">Choose a plan that fits your lifestyle. Subscribe and save — or order as you need.</p>
-            </div>
-            <div class="delivery-grid">
-                <div class="delivery-card fade-in">
-                    <h3>🚶 One-Time Order</h3>
-                    <p>Perfect for trying us out or topping up. Order any quantity and we'll deliver to your door in Eldoret within 24 hours.</p>
-                    <div class="price">Free <span>delivery on orders above KES 500</span></div>
-                    <button class="mpesa-btn" onclick="orderNow('One-Time Order', 0)">Order Now</button>
-                </div>
-                <div class="delivery-card fade-in">
-                    <h3>📅 Weekly Subscription</h3>
-                    <p>Never run out of water again. Get your preferred quantity delivered every week on your chosen day. Pause anytime.</p>
-                    <div class="price">10% <span>off every order</span></div>
-                    <button class="mpesa-btn" onclick="orderNow('Weekly Subscription', 0)">Subscribe</button>
-                </div>
-                <div class="delivery-card fade-in">
-                    <h3>🏢 Office / Bulk</h3>
-                    <p>Offices, schools, restaurants, and events. We handle large volumes with scheduled delivery and invoicing.</p>
-                    <div class="price">Custom <span>pricing available</span></div>
-                    <button class="mpesa-btn" onclick="orderNow('Office/Bulk', 0)">Get a Quote</button>
-                </div>
-            </div>
-        </div>
+    <section class="delivery" id="delivery" aria-labelledby="delivery-title">
+      <div class="container delivery-grid">
+        <div class="map-card"><div class="map-visual" role="img" aria-label="Abstract concept map of Eldoret delivery zones"><span class="map-label">CBD</span><span class="map-label">Pioneer</span><span class="map-label">Kapsoya</span><span class="map-label">Annex</span><span class="map-label">Elgon View</span></div><p class="eyebrow">Concept service area</p><h2 id="delivery-title" style="margin:0;font:500 2.1rem var(--serif)">From town to your doorstep.</h2><p style="color:rgba(255,255,255,.7)">A transparent zone model makes delivery expectations clear before checkout.</p></div>
+        <div><p class="eyebrow">Delivery zones</p><h2 class="section-title">Know the route.<br>Know the fee.</h2><p class="lede">Sample zones demonstrate how an operating service could communicate coverage without vague promises.</p><div class="zones">
+          <article class="zone"><div class="zone-top"><h3>Town core</h3><strong>KSh 0</strong></div><p>CBD, Pioneer, Langas · same-day concept window</p></article>
+          <article class="zone"><div class="zone-top"><h3>Inner Eldoret</h3><strong>KSh 100</strong></div><p>Kapsoya, Elgon View, Kimumu · scheduled concept window</p></article>
+          <article class="zone"><div class="zone-top"><h3>Outer route</h3><strong>KSh 180</strong></div><p>Annex and nearby outskirts · grouped route concept</p></article>
+        </div></div>
+      </div>
     </section>
 
-    <!-- Testimonials -->
-    <section class="section">
-        <div class="section-header fade-in">
-            <span class="section-tag">Testimonials</span>
-            <h2 class="section-title">What Our Customers Say</h2>
-            <p class="section-subtitle">Real reviews from real people in Eldoret who trust Koromosho Springs for their daily hydration.</p>
-        </div>
-        <div class="testimonials-grid">
-            <div class="testimonial-card fade-in">
-                <div class="testimonial-stars">★★★★★</div>
-                <p class="testimonial-text">"I've been ordering from Koromosho Springs for my office for 6 months. The delivery is always on time, the water tastes great, and the M-Pesa payment is super convenient. Highly recommend!"</p>
-                <div class="testimonial-author">
-                    <div class="testimonial-avatar">JM</div>
-                    <div>
-                        <div class="testimonial-name">James Mutai</div>
-                        <div class="testimonial-role">Office Manager, Eldoret</div>
-                    </div>
-                </div>
-            </div>
-            <div class="testimonial-card fade-in">
-                <div class="testimonial-stars">★★★★★</div>
-                <p class="testimonial-text">"The weekly subscription is a lifesaver. I never have to worry about running out of water for my family. The delivery guy is friendly and always calls before arriving."</p>
-                <div class="testimonial-author">
-                    <div class="testimonial-avatar">SC</div>
-                    <div>
-                        <div class="testimonial-name">Sarah Chepkemoi</div>
-                        <div class="testimonial-role">Homeowner, Kapsoya</div>
-                    </div>
-                </div>
-            </div>
-            <div class="testimonial-card fade-in">
-                <div class="testimonial-stars">★★★★★</div>
-                <p class="testimonial-text">"We used Koromosho Springs for our wedding reception — 300 guests, zero complaints. The branded bottles were a nice touch. Professional service from start to finish."</p>
-                <div class="testimonial-author">
-                    <div class="testimonial-avatar">DK</div>
-                    <div>
-                        <div class="testimonial-name">David Kipchirchir</div>
-                        <div class="testimonial-role">Event Organizer</div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <section class="planner" id="planner" aria-labelledby="planner-title">
+      <div class="container planner-grid">
+        <div><p class="eyebrow">Interactive prototype</p><h2 class="section-title" id="planner-title">Plan it before you send it.</h2><p class="lede">Try the portfolio demo to see how product, quantity and route become one clear order brief. Nothing is transmitted or charged.</p></div>
+        <form class="planner-panel" id="orderPlanner">
+          <span class="demo-label">Demo only</span>
+          <div class="field-grid">
+            <div class="field"><label for="product">Water size</label><select id="product" name="product"><option value="30">Safiri 500 ml — KSh 30</option><option value="60">Kazi 1 litre — KSh 60</option><option value="300">Nyumbani 20 L refill — KSh 300</option></select></div>
+            <div class="field"><label for="quantity">Quantity</label><input id="quantity" name="quantity" type="number" min="1" max="50" value="2" inputmode="numeric"></div>
+            <div class="field full"><label for="zone">Delivery zone</label><select id="zone" name="zone"><option value="0">Town core — KSh 0</option><option value="100">Inner Eldoret — KSh 100</option><option value="180">Outer route — KSh 180</option></select></div>
+          </div>
+          <div class="estimate" aria-live="polite"><div class="estimate-row"><span>Water</span><strong id="itemTotal">KSh 60</strong></div><div class="estimate-row"><span>Concept delivery fee</span><strong id="deliveryTotal">KSh 0</strong></div><div class="estimate-row estimate-total"><span>Estimated total</span><strong id="grandTotal">KSh 60</strong></div></div>
+          <button class="button button-primary" type="button" id="copyOrder">Copy sample order brief</button>
+          <p id="copyStatus" role="status"></p><p class="form-note">Portfolio prototype: no personal details, M-Pesa prompt, order or payment is created.</p>
+        </form>
+      </div>
     </section>
 
-    <!-- Contact Section -->
-    <section class="contact-section" id="contact">
-        <div class="section">
-            <div class="section-header fade-in">
-                <span class="section-tag">Contact</span>
-                <h2 class="section-title">Get in Touch</h2>
-                <p class="section-subtitle">Have a question, bulk order, or custom request? We're here to help. Reach out via WhatsApp, phone, or the form below.</p>
-            </div>
-            <div class="contact-grid">
-                <div class="contact-info fade-in">
-                    <h3>Let's Talk Water</h3>
-                    <p>Whether you need a single bottle or a truckload, we're ready to deliver. Our team is available 7 days a week to take your order or answer questions.</p>
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <div class="contact-item-icon">📱</div>
-                            <div class="contact-item-text">
-                                <h4>WhatsApp / Phone</h4>
-                                <p>+254 700 000 000</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-item-icon">📧</div>
-                            <div class="contact-item-text">
-                                <h4>Email</h4>
-                                <p>hello@koromoshosprings.co.ke</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-item-icon">📍</div>
-                            <div class="contact-item-text">
-                                <h4>Location</h4>
-                                <p>Eldoret, Uasin Gishu County, Kenya</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-item-icon">🕐</div>
-                            <div class="contact-item-text">
-                                <h4>Delivery Hours</h4>
-                                <p>Mon - Sat: 8:00 AM - 6:00 PM</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="contact-form fade-in">
-                    <form id="orderForm" onsubmit="handleSubmit(event)">
-                        <div class="form-group">
-                            <label for="name">Your Name</label>
-                            <input type="text" id="name" placeholder="John Doe" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" placeholder="+254 7XX XXX XXX" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="product">Select Product</label>
-                            <select id="product" required>
-                                <option value="">Choose a product...</option>
-                                <option value="500ml">500ml Bottle - KES 30</option>
-                                <option value="1litre">1 Litre Bottle - KES 50</option>
-                                <option value="5litre">5 Litre Jerrycan - KES 200</option>
-                                <option value="18.9litre">18.9 Litre Dispenser - KES 350</option>
-                                <option value="bulk">Bulk Pack (24 x 500ml) - KES 650</option>
-                                <option value="event">Event Package - Custom</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="quantity">Quantity</label>
-                            <input type="number" id="quantity" placeholder="How many?" min="1" value="1">
-                        </div>
-                        <div class="form-group">
-                            <label for="address">Delivery Address</label>
-                            <textarea id="address" placeholder="Street, Estate, Landmark in Eldoret..." required></textarea>
-                        </div>
-                        <div class="form-group">
-                            <label for="notes">Additional Notes (Optional)</label>
-                            <textarea id="notes" placeholder="Delivery instructions, preferred time, etc."></textarea>
-                        </div>
-                        <button type="submit" class="submit-btn">📨 Send Order Request</button>
-                    </form>
-                </div>
-            </div>
-        </div>
+    <section class="case-study" id="project" aria-labelledby="project-title">
+      <div class="container case-grid"><div class="case-copy"><p class="eyebrow">Project note</p><h2 class="section-title" id="project-title">Designed in Kenya, for a Kenyan context.</h2><p>Koromosho Springs is Nash’s personal front-end concept exploring how a local essentials brand can feel premium without losing clarity. The refactor replaces placeholder claims and fake conversion moments with a transparent, accessible prototype built in semantic HTML, CSS and vanilla JavaScript.</p></div><ul class="case-meta"><li><span>Classification</span><strong>Personal concept</strong></li><li><span>Role</span><strong>Design & front end</strong></li><li><span>Focus</span><strong>Brand, UX, accessibility</strong></li><li><span>Stack</span><strong>HTML · CSS · JavaScript</strong></li><li><span>Locale</span><strong>Eldoret, Kenya</strong></li></ul></div>
     </section>
+  </main>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-grid">
-            <div class="footer-brand">
-                <h3>
-                    <div class="logo-icon" style="width:40px;height:40px;font-size:1rem;">KS</div>
-                    Koromosho Springs
-                </h3>
-                <p>Premium purified drinking water from Eldoret, Kenya. Delivering purity, health, and hydration to homes and businesses across the Rift Valley.</p>
-                <div class="footer-social">
-                    <a href="#" title="Facebook">f</a>
-                    <a href="#" title="Instagram">📷</a>
-                    <a href="#" title="Twitter">𝕏</a>
-                    <a href="https://wa.me/254700000000" title="WhatsApp">💬</a>
-                </div>
-            </div>
-            <div class="footer-links">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#products">Products</a></li>
-                    <li><a href="#delivery">Delivery</a></li>
-                </ul>
-            </div>
-            <div class="footer-links">
-                <h4>Products</h4>
-                <ul>
-                    <li><a href="#products">500ml Bottle</a></li>
-                    <li><a href="#products">1 Litre Bottle</a></li>
-                    <li><a href="#products">5 Litre Jerrycan</a></li>
-                    <li><a href="#products">18.9 Litre Dispenser</a></li>
-                </ul>
-            </div>
-            <div class="footer-links">
-                <h4>Support</h4>
-                <ul>
-                    <li><a href="#contact">Contact Us</a></li>
-                    <li><a href="#delivery">Delivery Info</a></li>
-                    <li><a href="#">FAQs</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>© 2026 Koromosho Springs. All rights reserved. Made with 💧 in Eldoret, Kenya.</p>
-        </div>
-    </footer>
+  <footer><div class="container footer-inner"><span>© <span id="year"></span> Koromosho Springs · Personal portfolio concept</span><a href="#top">Back to top ↑</a></div></footer>
 
-    <!-- WhatsApp Float -->
-    <a href="https://wa.me/254700000000" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
-        💬
-    </a>
+  <script>
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('#navLinks');
+    const closeNav = () => { navLinks.classList.remove('open'); navToggle.setAttribute('aria-expanded', 'false'); navToggle.setAttribute('aria-label', 'Open navigation'); document.body.classList.remove('nav-open'); };
+    navToggle.addEventListener('click', () => { const isOpen = navLinks.classList.toggle('open'); navToggle.setAttribute('aria-expanded', String(isOpen)); navToggle.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation'); document.body.classList.toggle('nav-open', isOpen); });
+    navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', closeNav));
+    window.addEventListener('resize', () => { if (window.innerWidth > 850) closeNav(); });
 
-    <!-- Modal -->
-    <div id="orderModal" style="display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.6);z-index:9999;align-items:center;justify-content:center;">
-        <div style="background:white;padding:2.5rem;border-radius:20px;max-width:400px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.3);animation:slideInLeft 0.3s ease;">
-            <div style="font-size:3rem;margin-bottom:1rem;">✅</div>
-            <h3 style="font-size:1.5rem;color:var(--dark);margin-bottom:0.5rem;">Order Request Sent!</h3>
-            <p style="color:var(--text-light);margin-bottom:1.5rem;" id="modalText">We'll call you within 30 minutes to confirm your order.</p>
-            <button onclick="closeModal()" style="background:var(--primary);color:white;padding:0.8rem 2rem;border:none;border-radius:50px;font-weight:600;font-family:'Poppins',sans-serif;cursor:pointer;">Awesome!</button>
-        </div>
-    </div>
-
-    <script>
-        // Navbar scroll effect
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-
-        // Smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Fade in animation on scroll
-        const fadeElements = document.querySelectorAll('.fade-in');
-        const fadeObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, { threshold: 0.1 });
-
-        fadeElements.forEach(el => fadeObserver.observe(el));
-
-        // Counter animation
-        const counters = document.querySelectorAll('.stat-number');
-        const counterObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const target = parseInt(entry.target.getAttribute('data-count'));
-                    animateCounter(entry.target, target);
-                    counterObserver.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.5 });
-
-        counters.forEach(counter => counterObserver.observe(counter));
-
-        function animateCounter(element, target) {
-            let current = 0;
-            const increment = target / 50;
-            const timer = setInterval(() => {
-                current += increment;
-                if (current >= target) {
-                    element.textContent = target.toLocaleString() + (target === 100 ? '%' : '+');
-                    clearInterval(timer);
-                } else {
-                    element.textContent = Math.floor(current).toLocaleString() + (target === 100 ? '%' : '+');
-                }
-            }, 30);
-        }
-
-        // Order function
-        function orderNow(product, price) {
-            document.getElementById('product').value = product.toLowerCase().includes('500ml') ? '500ml' :
-                product.toLowerCase().includes('1 litre') ? '1litre' :
-                product.toLowerCase().includes('5 litre') ? '5litre' :
-                product.toLowerCase().includes('18.9') ? '18.9litre' :
-                product.toLowerCase().includes('bulk') ? 'bulk' :
-                product.toLowerCase().includes('event') ? 'event' : '';
-            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
-        }
-
-        // Form submit
-        function handleSubmit(e) {
-            e.preventDefault();
-            const name = document.getElementById('name').value;
-            const product = document.getElementById('product').options[document.getElementById('product').selectedIndex].text;
-            document.getElementById('modalText').textContent = `Thanks ${name}! Your order for ${product} has been received. We'll call you within 30 minutes to confirm.`;
-            document.getElementById('orderModal').style.display = 'flex';
-            e.target.reset();
-        }
-
-        function closeModal() {
-            document.getElementById('orderModal').style.display = 'none';
-        }
-
-        // Close modal on outside click
-        document.getElementById('orderModal').addEventListener('click', function(e) {
-            if (e.target === this) closeModal();
-        });
-
-        // Mobile menu toggle
-        const menuToggle = document.getElementById('menuToggle');
-        const navLinks = document.getElementById('navLinks');
-        let menuOpen = false;
-
-        menuToggle.addEventListener('click', () => {
-            menuOpen = !menuOpen;
-            if (menuOpen) {
-                navLinks.style.display = 'flex';
-                navLinks.style.flexDirection = 'column';
-                navLinks.style.position = 'absolute';
-                navLinks.style.top = '70px';
-                navLinks.style.left = '5%';
-                navLinks.style.right = '5%';
-                navLinks.style.background = 'white';
-                navLinks.style.padding = '2rem';
-                navLinks.style.borderRadius = '20px';
-                navLinks.style.boxShadow = '0 10px 40px rgba(0,0,0,0.15)';
-                navLinks.style.zIndex = '999';
-                navLinks.style.gap = '1.5rem';
-                navLinks.querySelectorAll('a').forEach(a => a.style.color = '#333');
-            } else {
-                navLinks.style.display = '';
-                navLinks.style.flexDirection = '';
-                navLinks.style.position = '';
-                navLinks.style.top = '';
-                navLinks.style.left = '';
-                navLinks.style.right = '';
-                navLinks.style.background = '';
-                navLinks.style.padding = '';
-                navLinks.style.borderRadius = '';
-                navLinks.style.boxShadow = '';
-                navLinks.style.zIndex = '';
-                navLinks.style.gap = '';
-            }
-        });
-    </script>
+    const product = document.querySelector('#product');
+    const quantity = document.querySelector('#quantity');
+    const zone = document.querySelector('#zone');
+    const money = value => `KSh ${new Intl.NumberFormat('en-KE', { maximumFractionDigits: 0 }).format(value)}`;
+    const updateEstimate = () => {
+      const qty = Math.min(50, Math.max(1, Number(quantity.value) || 1));
+      quantity.value = qty;
+      const items = Number(product.value) * qty;
+      const delivery = Number(zone.value);
+      document.querySelector('#itemTotal').textContent = money(items);
+      document.querySelector('#deliveryTotal').textContent = money(delivery);
+      document.querySelector('#grandTotal').textContent = money(items + delivery);
+    };
+    [product, quantity, zone].forEach(control => control.addEventListener('input', updateEstimate));
+    document.querySelector('#copyOrder').addEventListener('click', async () => {
+      const brief = `Koromosho Springs concept order: ${quantity.value} × ${product.options[product.selectedIndex].text.split(' — ')[0]}, ${zone.options[zone.selectedIndex].text.split(' — ')[0]}. Estimated total ${document.querySelector('#grandTotal').textContent}. Portfolio demo only.`;
+      const status = document.querySelector('#copyStatus');
+      try { await navigator.clipboard.writeText(brief); status.textContent = 'Sample brief copied — no order was submitted.'; }
+      catch { status.textContent = brief; }
+    });
+    document.querySelector('#year').textContent = new Date().getFullYear();
+    updateEstimate();
+  </script>
 </body>
 </html>
